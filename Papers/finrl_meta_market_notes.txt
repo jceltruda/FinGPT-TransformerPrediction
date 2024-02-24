@@ -1,0 +1,20 @@
+The paper presents FinRL-Meta, a library for financial reinforcement learning research
+
+Project Description:
+- A major challenge is creating realistic market simulations to train and test RL agents
+- There is often a gap between simulated and real world performance
+- FinRL-Meta provides a pipeline to automatically process raw financial data into training environments following a standard Gym API
+- This allows accessing data from diverse sources and incorporating real market frictions like trading costs
+- The library reproduces experiments from published papers as benchmarks for further research
+- This includes tasks like stock trading, cryptocurrency trading and portfolio allocation
+- Benchmark results on metrics like Sharpe ratio and cumulative return are shared on cloud platforms for community competitions
+
+Learning:
+- Dozens of Python demo notebooks are provided for educating new users(find links)
+- The notebooks are organized into a curriculum
+
+Future work:
+- Future work includes expanding the universe of market environments, especially using generative models to better simulate real markets
+
+General Idea (tldr):
+FinRL-Meta creates an open infrastructure to advance the adoption of financial RL in live trading systems
