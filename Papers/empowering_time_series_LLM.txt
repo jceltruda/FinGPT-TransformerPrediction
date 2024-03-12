@@ -1,0 +1,18 @@
+Direct Query of LLMs
+- 
+
+Time Series Tokenization Design:
+- converting numerical values of time series data into string-based tokens discussed in Xue and Salim 2023 paper
+- Patch representation for time series
+    - How do we do different tokenization methods in application? 
+    - Example papers that use Patch representation for time series:
+        - One Fits All (OFA) [Zhou et al., 2023],
+        - LLM4TS [Chang et al., 2023], TEST [Sun et al., 2024],
+        - TEMPO [Cao et al., 2024], and Time-LLM [Jin et al., 2024]
+
+Prompt Design:
+- 
+
+
+Fine-tuning:
+- LoRA
