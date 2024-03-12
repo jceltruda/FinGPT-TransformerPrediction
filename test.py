@@ -4,22 +4,22 @@ import json
 from datetime import datetime, timedelta
 
 # Define the start and end dates
-end_date = datetime.now().date()
-start_date = end_date - timedelta(days=2*365)
+
+# end date is 1 year before today
+predict_end_date = datetime.now() - timedelta(days=365)
+predict_start_date = predict_end_date - timedelta(days=2*365)
 
 # Define the ticker symbol for DJIA
 ticker_symbol = "^DJI"
 
 # Fetch the DJIA stock data
-djia_data = yf.download(ticker_symbol, start=start_date, end=end_date)
+djia_data = yf.download(ticker_symbol, start=predict_start_date, end=predict_end_date)
 
 # Convert the DataFrame to a list of dictionaries
 djia_records = djia_data.reset_index().to_dict('records')
 
 # Write the data to a JSON Lines file
 output_file = "djia_stock_data.jsonl"
-# with jsonlines.open(output_file, mode='w') as writer:
-#     writer.write_all(djia_records)
 
 print(f"Length of data: {len(djia_records)}")
 
