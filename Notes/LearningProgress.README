@@ -1,0 +1,20 @@
+Learned about development environment and how to use google colab
+Learned certain limitations with colab such as UTF-8 based things not working for some things
+Difference in GPU types and efficiencies (using TPU-4 instead of CPU for ex)
+Learned about loss entropy
+Different training libraries
+Dataset Download and format in json
+Model Download
+Learned how to import models from hugging face, and use their interface to get access
+Learned basic model setup 
+Parameters for learning and how changing each one affects output
+
+Learned About what makes transformer models different:
+Transformer models stand out from other AI learning models due to their self-attention mechanism, which enables them to capture long-range dependencies in input sequences efficiently. They also utilize parallelizable architecture without recurrence or convolution, making them highly effective for various sequence-to-sequence tasks such as natural language processing.
+.
+Learned about training and loss function:
+Our goal for this project is to improve the model’s stock prediction abilities by improving its cross entropy loss function. This is a function that models the error of the model, the difference between the correct/best output and the actual output. This isn’t a function that we alter , it is one that the machine optimizes itself through training on the inputted data and our params we input.
+
+Learned about data:
+Must be in this format
+{"input": "What day is it?", "output": "wednesday."}
