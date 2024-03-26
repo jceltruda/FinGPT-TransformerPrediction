@@ -2,6 +2,8 @@
 
 We will evaluate the ability of Meta’s Llama 2-7B to predict stock prices, and then attempt to enhance this ability by fine-tuning the model using a custom dataset.
 
+Check each member's branch for their contributions and code.
+
 Overall Vision:
 
 Step 1 - Prediction:
