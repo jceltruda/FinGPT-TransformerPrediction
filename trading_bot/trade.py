@@ -41,7 +41,7 @@ def check_price_and_trade(api, symbol, qty, price_threshold):
 def trade_stock(api, symbol, decision, qty):
     current_price = api.get_latest_trade(symbol).price
     
-    if current_price > price_threshold:
+    if decision == "B":
         print(f"Placing a buy order for {qty} shares of {symbol} at ${current_price}")
         api.submit_order(
             symbol=symbol,
@@ -50,7 +50,7 @@ def trade_stock(api, symbol, decision, qty):
             type='market',
             time_in_force='gtc'
         )
-    else:
+    elif decision == "S":
         print(f"Placing a sell order for {qty} shares of {symbol} at ${current_price}")
         api.submit_order(
             symbol=symbol,
@@ -59,17 +59,26 @@ def trade_stock(api, symbol, decision, qty):
             type='market',
             time_in_force='gtc'
         )
+    
+    else:
+        raise ValueError("Invalid Decision Inputted")
 
 
 
 if __name__ == "__main__":
     api = setup()
     
+    '''
     symbol = 'AAPL'
     qty = 2
     price_threshold = 150
     check_price_and_trade(api, symbol, qty, price_threshold)
+    '''
     
     symbol = input('Enter a Stock Ticker to trade ==> ')
     decision = input('Enter B/S for buying and selling ==> ')
     qty = input('Enter the number of stocks you wish to buy/sell ==> ')
+
+    trade_stock(api, symbol, decision, qty)
+    
+    
