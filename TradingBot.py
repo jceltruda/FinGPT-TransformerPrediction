@@ -4,12 +4,13 @@ from alpaca.trading.enums import OrderSide, TimeInForce
 from alpaca.data import StockHistoricalDataClient, StockTradesRequest
 from datetime import datetime
 
+# Returns data needed by analyze function
 def getData(symbol):
     return "Unimplemented"
 
+# Function to determine if we should buy, sell, or hold
 def analyze(symbol):
     data = getData(symbol)
-    # Function to determine if we should buy, sell, or hold
     qty = "Unimplemented"
     return qty
 
@@ -24,11 +25,11 @@ if __name__ == '__main__':
         stocksToTrack[i] = (stock, qty)
         
     # Execute Decision
-        for stock, qty in stocksToTrack:
-                if qty != 0:
-                    if qty > 0:
-                        order = OrderSide.BUY
-                    else:
-                        order = OrderSide.SELL
-                    trade_data = MarketOrderRequest(stock, qty, order, TimeInForce.DAY)
-                    trading_client.submit_order(trade_data)
+    for stock, qty in stocksToTrack:
+            if qty != 0:
+                if qty > 0:
+                    order = OrderSide.BUY
+                else:
+                    order = OrderSide.SELL
+                trade_data = MarketOrderRequest(stock, qty, order, TimeInForce.DAY)
+                trading_client.submit_order(trade_data)
