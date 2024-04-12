@@ -20,8 +20,6 @@ Data is a crucial element of machine learning as it is through data that models 
 
 {"input": "What color is the sky?", "output": "The sky is blue."}
 
-When training more
-
 You can actually train the model easily, using predefined functions from a variety of libraries, including HuggingFace’s Transformers library.
 
 **Llama 2 model:**
