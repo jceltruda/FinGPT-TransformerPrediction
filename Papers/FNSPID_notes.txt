@@ -1,0 +1,14 @@
+Github: https://github.com/Zdong104/FNSPID
+ - FNSPID is a large-scale financial dataset that comprises 29.7 million stock prices and 15.7 million time-aligned financial news records for 4775 s&p 500 companies between the period of 1999 to 2023
+ - Dataset is created with the intention to take advantage of advancements in large language models to predict stock prices using sentiment and numerical data
+ - New machine learning techniques are addressing limitations in the linear regression that was used by traditional financial market analysis models
+ - Autoregressive Integrated Moving Average (ARIMA)
+ - Generalized Autoregressive Conditional Heteroscedasticity (GARCH)
+
+Construction of FNSPID Dataset:
+ - Used Yahoo Finance API to collect stock price data
+ - Used Selenium to scrape financial news from NASDAQ due to restrictions on data from other financial news sites
+ - Sentiment alaysis Methods NLTK, TextBlob, BERT were used but were tested but deemed not as effective as ChatGPT
+  
+Experiment with Dataset:
+ - Transformer model performed better than alternative models with larger number of training stocks
