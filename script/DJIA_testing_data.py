@@ -6,8 +6,8 @@ from datetime import datetime, timedelta
 # Define the start and end dates
 
 # end date is 1 year before today
-end_date = datetime.now() - timedelta(days=365)
-start_date = end_date - timedelta(days=2*365)
+end_date = datetime.now()
+start_date = "2024-01-01"
 
 # Define the ticker symbol for DJIA
 ticker_symbol = "^DJI"
@@ -19,7 +19,7 @@ djia_data = yf.download(ticker_symbol, start=start_date, end=end_date)
 djia_records = djia_data.reset_index().to_dict('records')
 
 # Write the data to a JSON Lines file
-output_file = "djia_stock_data.jsonl"
+output_file = "djia_stock_test_data.jsonl"
 
 print(f"Length of data: {len(djia_records)}")
 
