@@ -19,7 +19,7 @@ djia_data = yf.download(ticker_symbol, start=start_date, end=end_date)
 djia_records = djia_data.reset_index().to_dict('records')
 
 # Write the data to a JSON Lines file
-output_file = "djia_stock_test_data.jsonl"
+# output_file = "djia_stock_test_data.jsonl"
 
 print(f"Length of data: {len(djia_records)}")
 
@@ -27,9 +27,9 @@ print(f"Length of data: {len(djia_records)}")
 # day 7 is the output day and days 1-6 are the input days
 # for each day in the data, create a new record with the input and output days
 
-# Open the file in 'write' mode to clear it
-with open(output_file, 'w') as f:
-    pass
+# # Open the file in 'write' mode to clear it
+# with open(output_file, 'w') as f:
+#     pass
 
 prompt_list = []
 
@@ -80,10 +80,10 @@ with open("djia_stock_test_data_prompts.json", "w") as f:
 
 
 # check if the data is correct
-with open("djia_stock_test_data_prompts.json", 'r') as f:
-    prompt_list = json.load(f)
-    for prompt in prompt_list:
-        print(prompt)
+# with open("djia_stock_test_data_prompts.json", 'r') as f:
+#     prompt_list = json.load(f)
+#     for prompt in prompt_list:
+#         print(prompt)
 
 
-print(f"Data written to {output_file}")
+# print(f"Data written to {output_file}")
