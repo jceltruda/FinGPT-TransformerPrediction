@@ -18,3 +18,11 @@ Our goal for this project is to improve the model’s stock prediction abilities
 Learned about data:
 Must be in this format
 {"input": "What day is it?", "output": "wednesday."}
+
+Learned how to tokenize inputs into a uniform length to train more effectively
+Learned how to install and access an alpaca with code
+learned how to remotely run a trade on alpaca from code
+learned basics of making a trading bot
+learned how to implement a .py file and run it on colab
+Ran Model into trading bot appilication 
+made real time trades with said bot off previous predictions
